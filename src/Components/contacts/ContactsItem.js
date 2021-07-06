@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ContactsItemStyled } from "./ContactsItemStyled";
 import { connect } from "react-redux";
-import { contactRemoveSuccess } from "../../redux/contacts/contacts-actions";
+import { contactRemove } from "../../redux/contacts/contacts-operations";
 import contactsSelectors from "../../redux/contacts/contacts-selectors";
 
 const ContactsItem = ({ name, number, onClickRemove }) => {
@@ -57,7 +57,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onRemove: (contactId) => dispatch(contactRemoveSuccess(contactId)),
+  onRemove: (contactId) => dispatch(contactRemove(contactId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsList);

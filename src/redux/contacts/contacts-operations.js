@@ -29,7 +29,7 @@ export const contactSave = (contact) => (dispatch) => {
   axios
     .post("./contacts", contact)
     .then(({ data }) => {
-      console.log(data);
+      
       dispatch(contactSaveSuccess(data));
     })
     .catch((error) => dispatch(contactSaveError(error)));

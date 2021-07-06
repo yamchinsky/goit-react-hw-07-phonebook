@@ -39,7 +39,7 @@ class PhonebookFormItem extends Component {
           className="form-input"
           onSubmit={this.handleSubmit}
         >
-          <label className="filter-input">
+          <label className="phonebook-name">
             Name
             <br />
             <input
